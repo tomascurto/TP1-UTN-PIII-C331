@@ -1,0 +1,26 @@
+.info {
+    grid-area: info;
+}
+
+.bienvenida {
+    grid-area: bienvenida;
+}
+
+.carrete {
+    grid-area: carrete;
+}
+
+footer{
+    background-color: aquamarine;
+    position: fixed;
+    bottom: 0px;
+    width:100%;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-areas:
+    'bienvenida bienvenida'
+    'info carrete';
+}
