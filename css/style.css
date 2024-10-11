@@ -1,8 +1,24 @@
+/* GENERAL--------------------------------------------------------------------------------------------------------------- */
 
+/*FONDO*/
+.background{
 
+    background-color: #66b3be;
+    min-height: calc(100vh - 40px);
+}
+
+/*NAVBAR*/
 .navbar{
     position: sticky;
 }
+
+/* position: absolute;
+padding: 0;
+height: 56px;
+top: 0;
+left: 0;
+width: 100%; */
+
 .navbar-brand{
     width: 2%;
     display: grid;
@@ -12,70 +28,53 @@
 .navbar-brand img{
     width: 100%;
 }
-
 .navbar-text h1{
     justify-content: left;
     font-size: 20px;
     margin-bottom: 0;
 }
 
-.info {
-    grid-area: info;
-}
-
-.bienvenida {
-    grid-area: bienvenida;
-    
-}
-
-.carrete {
-    grid-area: carrete;
-}
-
+/*FOOTER*/
 footer{
-    position: fixed;
-    background-color: #4e649b;
+    position: relative;
+    background-color: #f3f4fb;
     bottom: 0;
     width:100%;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    height: 40px;
+    
+}
+footer p{
+    margin:auto;
 }
 
-.grid-container{
+
+/* HOME-------------------------------------------------------------------------------------------------------------------*/
+
+/*HOME GRID*/
+.home-grid-container{
     display: grid;
     grid-template-columns: 60% auto;
     grid-template-areas:
-    'bienvenida bienvenida'
-    'info carrete';
+    'bienvenida carrete'
+    'mapa info';
+}
+.home-gridcontainer section{
+    padding: 30px;
 }
 
-.email-label {
-    grid-area: email-label;
-}
-.email-input {
-    grid-area: email-input;
-}
-.password-label {
-    grid-area: password-label;
-}
-.password-input {
-    grid-area: password-input;
-}
-.captcha-label {
-    grid-area: captcha-label;
-}
-.captcha-checkbox {
-    grid-area: captcha-checkbox;
-}
-.submit-button {
-    
-    grid-area: submit-button;
-}
 
+
+/* SING IN----------------------------------------------------------------------------------------------------------------*/
+
+/*SI GRID*/
 .SI-grid-container{
     padding: 5%;
     background-color: #f3f4fb;
-    
     display: grid;
     justify-content: center;
     position: absolute;
@@ -84,24 +83,75 @@ footer{
     transform: translate(-50%, -50%);
     align-items: center;
     justify-items: center;
-    
     grid-template-areas:
     'email-label email-input'
     'password-label password-input'
     'captcha-label captcha-checkbox'
     'submit-button submit-button';
 }
-
-.gridcontainer section{
-    padding: 30px;
-}
-
 .SI-grid-container section{
-    padding: 5px;
+    padding: 10px;
+    
 }
+
+/* SING UP----------------------------------------------------------------------------------------------------------------*/
+
+/*SU GRID*/
+.SU-grid-container{
+    padding: 5%;
+    background-color: #f3f4fb;
+    display: grid;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+    'name-label name-input'
+    'lastname-label lastname-input'
+    'email-label email-input'
+    'password-label password-input'
+    'Rpassword-label Rpassword-input'
+    'captcha-label captcha-checkbox'
+    'submit-button submit-button';
+}
+.SU-grid-container section{
+    padding: 10px;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/*GRID AREAS*/
+
+.info {grid-area: info;}
+.bienvenida {grid-area: bienvenida;}
+.carrete {grid-area: carrete;}
+.email-label {grid-area: email-label;}
+.email-input {grid-area: email-input;}
+.password-label {grid-area: password-label;}
+.password-input {grid-area: password-input;}
+.Rpassword-label {grid-area: Rpassword-label;}
+.Rpassword-input {grid-area: Rpassword-input;}
+.captcha-label {grid-area: captcha-label;}
+.captcha-checkbox {grid-area: captcha-checkbox;}
+.submit-button {grid-area: submit-button;}
+.name-label {grid-area: name-label;}
+.name-input {grid-area: name-input;}
+.lastname-label {grid-area: lastname-label;}
+.lastname-input {grid-area: lastname-input;}
+iframe{grid-area: mapa;}
+
+
+
 
 h3{
-
     background-color: #4e649b; 
     background-color: #f3f4fb;  
     background-color: #967eae;  
@@ -110,6 +160,5 @@ h3{
     background-color: #98bee0; 
     background-color: #c1e6f5; 
     background-color: #bcb2d4; 
-    
 }
  
