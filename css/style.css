@@ -140,13 +140,20 @@ footer p{
 .Rpassword-label {grid-area: Rpassword-label;}
 .Rpassword-input {grid-area: Rpassword-input;}
 .captcha-label {grid-area: captcha-label;}
-.captcha-checkbox {grid-area: captcha-checkbox;}
-.submit-button {grid-area: submit-button;}
+.captcha-checkbox {grid-area: captcha-checkbox;
+    margin-left: 5%;
+    justify-self: start;}
+.submit-button {grid-area: submit-button;
+margin-top: 1%;}
 .name-label {grid-area: name-label;}
 .name-input {grid-area: name-input;}
 .lastname-label {grid-area: lastname-label;}
 .lastname-input {grid-area: lastname-input;}
-iframe{grid-area: mapa;}
+iframe{grid-area: mapa;
+width: 90%;
+height: 100%;
+border:0; 
+}
 
 
 
