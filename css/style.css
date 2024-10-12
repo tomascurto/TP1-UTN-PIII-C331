@@ -1,8 +1,12 @@
 /* GENERAL--------------------------------------------------------------------------------------------------------------- */
-
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 /*FONDO*/
 .background{
-
+    
     background-color: #66b3be;
     min-height: calc(100vh - 40px);
 }
@@ -36,6 +40,7 @@ width: 100%; */
 
 /*FOOTER*/
 footer{
+    margin: 0;
     position: relative;
     background-color: #f3f4fb;
     bottom: 0;
@@ -58,10 +63,14 @@ footer p{
 /*HOME GRID*/
 .home-grid-container{
     display: grid;
-    grid-template-columns: 60% auto;
+    grid-template-columns: auto 10% auto;
+    grid-template-rows:auto 40% ;
     grid-template-areas:
-    'bienvenida carrete'
-    'mapa info';
+    'bienvenida carrete carrete'
+    'mapa mapa info';
+   gap: 1%;
+   margin: 1%;
+   
 }
 .home-gridcontainer section{
     padding: 30px;
@@ -88,9 +97,11 @@ footer p{
     'password-label password-input'
     'captcha-label captcha-checkbox'
     'submit-button submit-button';
+    border-radius: 1%;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .SI-grid-container section{
-    padding: 10px;
+    padding: 3px;
     
 }
 
@@ -116,9 +127,11 @@ footer p{
     'Rpassword-label Rpassword-input'
     'captcha-label captcha-checkbox'
     'submit-button submit-button';
+    border-radius: 1%;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .SU-grid-container section{
-    padding: 10px;
+    padding: 3px;
 }
 
 
@@ -130,8 +143,19 @@ footer p{
 
 /*GRID AREAS*/
 
-.info {grid-area: info;}
-.bienvenida {grid-area: bienvenida;}
+.info {grid-area: info;
+    text-align: left;
+    overflow: auto;
+    padding: 3%;
+    border-radius: 1%;
+    background-color: #f3f4fb;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);}
+.bienvenida {grid-area: bienvenida;
+    height: 95%;
+    padding: 3%;
+    border-radius: 1%;
+    background-color: #f3f4fb;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);}
 .carrete {grid-area: carrete;}
 .email-label {grid-area: email-label;}
 .email-input {grid-area: email-input;}
@@ -144,16 +168,15 @@ footer p{
     margin-left: 5%;
     justify-self: start;}
 .submit-button {grid-area: submit-button;
-margin-top: 1%;}
+    margin-top: 5%;}
 .name-label {grid-area: name-label;}
 .name-input {grid-area: name-input;}
 .lastname-label {grid-area: lastname-label;}
 .lastname-input {grid-area: lastname-input;}
 iframe{grid-area: mapa;
-width: 90%;
-height: 100%;
-border:0; 
-}
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;}
 
 
 
