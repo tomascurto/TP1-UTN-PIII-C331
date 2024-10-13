@@ -137,7 +137,7 @@ label {
 /*HOME GRID*/
 .home-grid-container{
     display: grid;
-    grid-template-columns: auto 15% auto;
+    grid-template-columns: auto 15% 20%;
     grid-template-areas:
     'bienvenida bienvenida carrete '
     'servicios info info '
@@ -293,7 +293,7 @@ section.iframe-container{
         'servicios servicios '
         'carrete mapa'
         'info info';
-        grid-template-rows: auto 15% 25% auto;}
+        grid-template-rows: auto 15% 31% auto;}
     .servicios ul {
         grid-template-columns: auto 15% 15% 15% 15% auto;
     }
@@ -336,9 +336,9 @@ section.iframe-container{
         'captcha-label captcha-checkbox' 
         'submit-button submit-button';
         justify-items: center;
-        transform: translate(-50%,-50%) scale(1); 
+        transform: translate(-50%,-50%) scale(0.8); 
         transform-origin: center;
-        height: 80%;
+        height:100%;
     }
     .captcha-checkbox {
         margin-left: 0%;
@@ -361,17 +361,66 @@ section.iframe-container{
         'info'
         'mapa';
         grid-template-rows: auto 15% auto;}
+    
 }
-/* h3{
-transform: scale (1.5);
-t
-    background-color: #4e649b; 
-    background-color: #f3f4fb;  
-    background-color: #967eae;  
-    background-color: #a49cbc;  
-    background-color: #66b3be;  
-    background-color: #98bee0; 
-    background-color: #c1e6f5; 
-    background-color: #bcb2d4; 
-} */
+
+/* ...........................................media query 6.......................................... */
+@media (max-height: 650px){
+    .SU-grid-container{
+        grid-template-areas:
+        'name-label name-input'
+        'lastname-label lastname-input'
+        'email-label email-input'
+        'password-label password-input'
+        'Rpassword-label Rpassword-input'
+        'captcha-label captcha-checkbox'
+        'submit-button submit-button';
+        justify-items: center;
+        transform: translate(-50%,-50%) scale(0.8); 
+        transform-origin: center;
+        height:60%;
+    }
+    
+}
+
+/* ...........................................media query 7.......................................... */
+@media (max-height: 526px){
+    .SU-grid-container{
+        transform: translate(-50%,-50%) scale(0.8); 
+        transform-origin: center;
+        height:80%;
+    }
+}
+
+/* ...........................................media query 7.......................................... */
+@media (max-height: 526px){
+    .SI-grid-container{
+        transform: translate(-50%,-50%) scale(0.8); 
+        transform-origin: center;
+        height:80%;
+    }
+}
  
+
+/* ...........................................media query 8.......................................... */
+@media (max-height: 410px){
+    .SU-grid-container{
+        transform: translate(-50%,-50%) scale(0.5); 
+        transform-origin: center;
+        height:100%;
+    }
+}
+
+/* ...........................................media query 9.......................................... */
+@media (max-height: 325px){
+    .SU-grid-container{
+        transform: translate(-50%,-50%) scale(0.4); 
+        transform-origin: center;
+        height:120%;
+    }
+    .SI-grid-container{
+        transform: translate(-50%,-50%) scale(0.4); 
+        transform-origin: center;
+        height:120%;
+    }
+}
