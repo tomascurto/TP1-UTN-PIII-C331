@@ -1,28 +1,15 @@
 /* GENERAL--------------------------------------------------------------------------------------------------------------- */
-body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
+*{
+    font-family: 'Segoe UI';
+} 
+
 /*FONDO*/
 .background{
-    
     background-color: #66b3be;
     min-height: calc(100vh - 40px);
 }
 
 /*NAVBAR*/
-.navbar{
-    position: sticky;
-}
-
-/* position: absolute;
-padding: 0;
-height: 56px;
-top: 0;
-left: 0;
-width: 100%; */
-
 .navbar-brand{
     width: 2%;
     display: grid;
@@ -51,38 +38,24 @@ footer{
     align-items: center;
     justify-items: center;
     height: 40px;
-    
 }
 footer p{
     margin:auto;
+    text-align: center;
 }
 
-
-/* HOME-------------------------------------------------------------------------------------------------------------------*/
-
-/*HOME GRID*/
-.home-grid-container{
-    display: grid;
-    grid-template-columns: auto 10% auto;
-    grid-template-rows:auto 40% ;
-    grid-template-areas:
-    'bienvenida carrete carrete'
-    'mapa mapa info';
-   gap: 1%;
-   margin: 1%;
-   
+label {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
-.home-gridcontainer section{
-    padding: 30px;
-}
-
 
 
 /* SING IN----------------------------------------------------------------------------------------------------------------*/
 
 /*SI GRID*/
 .SI-grid-container{
-    padding: 5%;
+    padding: 2%;
     background-color: #f3f4fb;
     display: grid;
     justify-content: center;
@@ -91,25 +64,26 @@ footer p{
     left: 50%;
     transform: translate(-50%, -50%);
     align-items: center;
-    justify-items: center;
+    justify-items: left;
     grid-template-areas:
     'email-label email-input'
     'password-label password-input'
     'captcha-label captcha-checkbox'
     'submit-button submit-button';
-    border-radius: 1%;
+    background-color: #f3f4fb;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 1%;
+    gap:2%
 }
 .SI-grid-container section{
     padding: 3px;
-    
 }
 
 /* SING UP----------------------------------------------------------------------------------------------------------------*/
 
 /*SU GRID*/
 .SU-grid-container{
-    padding: 5%;
+    padding: 2%;
     background-color: #f3f4fb;
     display: grid;
     justify-content: center;
@@ -118,7 +92,7 @@ footer p{
     left: 50%;
     transform: translate(-50%, -50%);
     align-items: center;
-    justify-items: center;
+    justify-items: left;
     grid-template-areas:
     'name-label name-input'
     'lastname-label lastname-input'
@@ -127,36 +101,18 @@ footer p{
     'Rpassword-label Rpassword-input'
     'captcha-label captcha-checkbox'
     'submit-button submit-button';
-    border-radius: 1%;
+    background-color: #f3f4fb;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 1%;
+    gap: 2%
 }
 .SU-grid-container section{
     padding: 3px;
+    
 }
 
+/* FORMS -----------------------------------------------------------------------------------------------------------------*/
 
-/*-----------------------------------------------------------------------------------------------------------------------*/
-
-
-
-
-
-/*GRID AREAS*/
-
-.info {grid-area: info;
-    text-align: left;
-    overflow: auto;
-    padding: 3%;
-    border-radius: 1%;
-    background-color: #f3f4fb;
-    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);}
-.bienvenida {grid-area: bienvenida;
-    height: 95%;
-    padding: 3%;
-    border-radius: 1%;
-    background-color: #f3f4fb;
-    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);}
-.carrete {grid-area: carrete;}
 .email-label {grid-area: email-label;}
 .email-input {grid-area: email-input;}
 .password-label {grid-area: password-label;}
@@ -168,20 +124,247 @@ footer p{
     margin-left: 5%;
     justify-self: start;}
 .submit-button {grid-area: submit-button;
-    margin-top: 5%;}
+    margin-top: 5%;
+    justify-self: center;
+    margin-bottom: 30px;}
 .name-label {grid-area: name-label;}
 .name-input {grid-area: name-input;}
 .lastname-label {grid-area: lastname-label;}
 .lastname-input {grid-area: lastname-input;}
+
+/* HOME-------------------------------------------------------------------------------------------------------------------*/
+
+/*HOME GRID*/
+.home-grid-container{
+    display: grid;
+    grid-template-columns: auto 15% auto;
+    grid-template-areas:
+    'bienvenida bienvenida carrete '
+    'servicios info info '
+    'mapa info  info';
+    gap: 7%;
+    padding: 4%;
+    padding-bottom: 8%;
+    grid-template-rows: 36% 27% 32%;
+}
+.home-grid-container section {
+    padding-top: 8px;
+    background-color: #f3f4fb;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5); 
+    border-radius: 1%;   
+}
+
+/*GRID AREAS*/
+
+.info {grid-area: info;
+    font-size: large;
+    text-align: left;
+    overflow: auto;
+    padding: 3%;}
+
+
+.bienvenida {grid-area: bienvenida;
+    font-size:x-large;
+    height: 100%;
+    padding: 3%;}
+
+
+.servicios{grid-area: servicios;}
+.servicios ul{
+    display:grid;
+    padding: 0; 
+    gap: 1%;
+    justify-items: center;
+    align-items: top;
+    margin-bottom: 0;
+    grid-template-columns: 16% 16% 16% 16% 16% auto;
+    background-color: #f3f4fb;
+}
+.servicios li {
+    list-style-type: none;
+   text-align: center;
+}
+.servicios img {
+    width: 80px;
+}
+
+.home-grid-container h3{
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.carrete {grid-area: carrete;}
+.carousel-container{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: auto;
+}
+
+.carousel-item{
+    
+    height: 20%;
+}
+h2{
+    padding: 0px;
+    text-align: center;
+}
+
 iframe{grid-area: mapa;
     width: 100%;
     height: 100%;
-    border-radius: 1%;}
+    border-radius: 1%;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+section.iframe-container{
+    padding: 0;
+    margin: 0;
+}
 
+/*-----------------------------------------------------------------------------------------------------------------------*/
 
+/* ...........................................media query 1.......................................... */
+@media (max-width: 1366px){
+    .home-grid-container{
+        padding-bottom: 10%;
+    }
+}
 
+/* ...........................................media query 2.......................................... */
+@media (max-width: 1250px){
+    footer{
+        flex-direction: column;
+    }
+    .servicios ul{
+        grid-template-columns: 33% 33% auto;
+    }
+    .home-grid-container{
+        grid-template-columns: auto auto;
+        grid-template-areas:
+        'bienvenida  carrete '
+        'bienvenida  info '
+        'servicios  info '
+        'mapa   info';
+        padding-bottom: 5%;
+        grid-template-rows: auto 1% 25% auto;
+        gap: 3%;
+    }
 
-h3{
+    .info p{
+        font-size: 22px;
+        padding: 5px;
+    }
+    .SI-grid-container{
+        transform: translate(-50%,-50%) scale(1.5); 
+        transform-origin: center;
+    }
+    .SU-grid-container{
+        transform: translate(-50%,-50%) scale(1.5); 
+        transform-origin: center;
+    }
+}
+
+/* ...........................................media query 3.......................................... */
+@media (max-width: 1090px){
+    
+    .home-grid-container{
+        gap: 2%;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+        'bienvenida  carrete '
+        'bienvenida  info '
+        'servicios  info '
+        'mapa   info';
+        padding-bottom: 5%;
+        grid-template-rows: auto 15% 27% auto;}
+}
+
+/* ...........................................media query 4.......................................... */
+@media (max-width: 1024px){
+    .logo{
+        display: none;
+    }
+    .home-grid-container{
+        grid-template-columns: auto auto;
+        grid-template-areas:
+        'bienvenida bienvenida'
+        'servicios servicios '
+        'carrete mapa'
+        'info info';
+        grid-template-rows: auto 15% 25% auto;}
+    .servicios ul {
+        grid-template-columns: auto 15% 15% 15% 15% auto;
+    }
+}
+
+/* ...........................................media query 5.......................................... */
+@media (max-width: 768px){
+    .servicios ul{
+        grid-template-columns: 33% 33% auto;
+    }
+    .home-grid-container{
+        gap: 1%;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto 20% 20% auto;}
+    .SI-grid-container{
+        
+        grid-template-areas:
+        'email-label email-label' 
+        'email-input email-input'
+        'password-label password-label' 
+        'password-input password-input'
+        'captcha-label captcha-checkbox' 
+        'submit-button submit-button';
+        justify-items: center;
+        transform: translate(-50%,-50%) scale(1); 
+        transform-origin: center;
+    }
+    .SU-grid-container{
+        grid-template-areas:
+        'name-label name-label' 
+        'name-input name-input'
+        'lastname-label lastname-label' 
+        'lastname-input lastname-input'
+        'email-label email-label' 
+        'email-input email-input'
+        'password-label password-label' 
+        'password-input password-input'
+        'Rpassword-label Rpassword-label' 
+        'Rpassword-input Rpassword-input'
+        'captcha-label captcha-checkbox' 
+        'submit-button submit-button';
+        justify-items: center;
+        transform: translate(-50%,-50%) scale(1); 
+        transform-origin: center;
+        height: 80%;
+    }
+    .captcha-checkbox {
+        margin-left: 0%;
+        justify-self: center;
+    }
+    
+}
+
+/* ...........................................media query 5.......................................... */
+@media (max-width: 576px){
+    .servicios ul{
+        grid-template-columns: 33% 33% auto;
+    }
+    .home-grid-container{
+        grid-template-columns: 100%;
+        grid-template-areas:
+        'bienvenida'
+        'servicios'
+        'carrete'
+        'info'
+        'mapa';
+        grid-template-rows: auto 15% auto;}
+}
+/* h3{
+transform: scale (1.5);
+t
     background-color: #4e649b; 
     background-color: #f3f4fb;  
     background-color: #967eae;  
@@ -190,5 +373,5 @@ h3{
     background-color: #98bee0; 
     background-color: #c1e6f5; 
     background-color: #bcb2d4; 
-}
+} */
  
