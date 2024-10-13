@@ -391,15 +391,6 @@ section.iframe-container{
         height:80%;
     }
 }
-
-/* ...........................................media query 7.......................................... */
-@media (max-height: 526px){
-    .SI-grid-container{
-        transform: translate(-50%,-50%) scale(0.8); 
-        transform-origin: center;
-        height:80%;
-    }
-}
  
 
 /* ...........................................media query 8.......................................... */
